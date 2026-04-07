@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimplyOrder 後台管理</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>SimplyOrder 後台</h1>
+        <p>訂單處理與菜單管理</p>
+      </div>
+      <button id="open-add-modal" class="primary-btn">新增菜單</button>
+    </header>
+
+    <main class="layout admin-layout">
+      <section class="panel">
+        <h2>待處理點餐批次</h2>
+        <div id="order-list" class="order-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>菜單管理</h2>
+        <div id="admin-menu-list" class="admin-menu-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>整桌結帳</h2>
+        <div class="checkout-row">
+          <input id="checkout-table" placeholder="輸入桌號，例如 A1" />
+          <button id="checkout-btn" class="warn-btn">核銷整桌單據</button>
+        </div>
+        <p id="checkout-result" class="hint"></p>
+      </section>
+    </main>
+
+    <div id="add-modal" class="modal-backdrop">
+      <div class="modal-card">
+        <h2>新增菜單</h2>
+        <label>名稱 <input id="new-name" /></label>
+        <label>價格 <input id="new-price" type="number" min="1" /></label>
+        <label>圖片網址 <input id="new-image" /></label>
+        <label class="inline"><input id="new-visible" type="checkbox" checked /> 立即顯示</label>
+        <div class="row-end">
+          <button id="close-add-modal" class="ghost-btn">取消</button>
+          <button id="save-menu" class="primary-btn">儲存</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

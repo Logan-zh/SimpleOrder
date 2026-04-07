@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimplyOrder 前台點餐</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div id="table-modal" class="modal-backdrop active">
+      <div class="modal-card">
+        <h2>請先選擇桌號</h2>
+        <div class="table-grid" id="table-grid"></div>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <div>
+        <h1>SimplyOrder</h1>
+        <p id="table-label">尚未選擇桌號</p>
+      </div>
+      <button id="change-table" class="ghost-btn">切換桌號</button>
+    </header>
+
+    <main class="layout">
+      <section>
+        <h2>今日菜單</h2>
+        <div id="menu-list" class="menu-grid"></div>
+      </section>
+
+      <aside class="panel">
+        <h2>購物車</h2>
+        <div id="cart-list" class="cart-list"></div>
+        <div class="bill-sum" id="cart-total">總金額: $0</div>
+        <button id="submit-order" class="primary-btn">送出本次點餐</button>
+
+        <hr />
+
+        <h3>本桌帳單</h3>
+        <div id="bill-list" class="bill-list"></div>
+        <div class="bill-sum" id="bill-total">總項目: 0 / 總金額: $0</div>
+      </aside>
+    </main>
+
+    <script src="/js/front.js"></script>
+  </body>
+</html>
